@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS medicines (
 INSERT INTO medicines (name, affiliated_allergies)
 VALUES
     ('Penicillin', 'Hives, Rash, Anaphylaxis'),
-    ('Amoxicillin', 'Rash, Swelling, Anaphylaxis'),
+    ('Amoxicillin1', 'Rash, Swelling, Anaphylaxis'),
     ('Cefalexin', 'Rash, Cross-Reaction with Penicillin');
 
 
