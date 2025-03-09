@@ -82,9 +82,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html> -->
 
 
-
 <?php
-session_start();
+session_start(); // Start the session at the very beginning
+
 require 'vendor/autoload.php';
 
 // Connect to SQLite database
@@ -120,7 +120,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $db->prepare("UPDATE users SET name = ?, age = ?, gender = ?, allergies = ? WHERE id = ?");
     $stmt->execute([$name, $age, $gender, $allergies, $user_id]);
 
-    echo "<p style='color:green;'>Profile updated successfully!</p>";
+    // Redirect to avoid form resubmission issues
+    header("Location: user_profile.php?success=1");
+    exit;
 }
 ?>
 
@@ -137,6 +139,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h1>Update Your Profile</h1>
+
+    <?php if (isset($_GET['success'])): ?>
+        <p style="color: green;">Profile updated successfully!</p>
+    <?php endif; ?>
+
     <form method="POST">
         <label>Name: <input type="text" name="name" value="<?= htmlspecialchars($name) ?>" required></label>
         <label>Age: <input type="number" name="age" value="<?= htmlspecialchars($age) ?>" required></label>
