@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <?php
-session_start(); // Start the session at the very beginning
+session_start(); // Start the session
 
 require 'vendor/autoload.php';
 
@@ -132,33 +132,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        input, select, button { padding: 8px; margin: 5px; display: block; width: 100%; }
-    </style>
+    <link rel="stylesheet" href="css/design.css">
 </head>
 <body>
-    <h1>Update Your Profile</h1>
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="barcode_scanner.php">Scan Medicine</a>
+        <a href="logout.php">Logout</a>
+    </nav>
 
-    <?php if (isset($_GET['success'])): ?>
-        <p style="color: green;">Profile updated successfully!</p>
-    <?php endif; ?>
+    <section class="container">
+        <h1>Update Your Profile</h1>
 
-    <form method="POST">
-        <label>Name: <input type="text" name="name" value="<?= htmlspecialchars($name) ?>" required></label>
-        <label>Age: <input type="number" name="age" value="<?= htmlspecialchars($age) ?>" required></label>
-        <label>Gender: 
-            <select name="gender">
-                <option value="Male" <?= ($gender == "Male") ? "selected" : "" ?>>Male</option>
-                <option value="Female" <?= ($gender == "Female") ? "selected" : "" ?>>Female</option>
-                <option value="Other" <?= ($gender == "Other") ? "selected" : "" ?>>Other</option>
-            </select>
-        </label>
-        <label>Allergies (comma-separated): <input type="text" name="allergies" value="<?= htmlspecialchars($allergies) ?>" required></label>
-        <button type="submit">Save Profile</button>
-    </form>
+        <?php if (isset($_GET['success'])): ?>
+            <p class="success">Profile updated successfully!</p>
+        <?php endif; ?>
 
-    <p><a href="barcode_scanner.php">Scan a Barcode</a></p>
-    <p><a href="logout.php">Logout</a></p>
+        <form method="POST">
+            <label>Name: <input type="text" name="name" value="<?= htmlspecialchars($name) ?>" required></label>
+            <label>Age: <input type="number" name="age" value="<?= htmlspecialchars($age) ?>" required></label>
+            <label>Gender:
+                <select name="gender">
+                    <option value="Male" <?= ($gender == "Male") ? "selected" : "" ?>>Male</option>
+                    <option value="Female" <?= ($gender == "Female") ? "selected" : "" ?>>Female</option>
+                    <option value="Other" <?= ($gender == "Other") ? "selected" : "" ?>>Other</option>
+                </select>
+            </label>
+            <label>Allergies (comma-separated): <input type="text" name="allergies" value="<?= htmlspecialchars($allergies) ?>" required></label>
+            <button type="submit">Save Profile</button>
+        </form>
+    </section>
 </body>
 </html>
