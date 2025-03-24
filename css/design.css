@@ -1,110 +1,225 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
 body {
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    background: #800020; /* Burgundy */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Added this to prevent overlapping */
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+.btn-login {
+    background: white;
+    color: #800020;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+/* Content Wrapper (NEW FIX) */
+.content-wrapper {
+    margin-top: 120px; /* Pushes content down to avoid navbar overlap */
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none; /* Hidden by default on large screens */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+    transition: 0.3s ease-in-out;
+}
+.mobile-menu.active {
+    display: block; /* Show menu when active */
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #800020;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mobile-menu a:hover {
+    background: #f1f1f1;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links */
+    }
+    .menu-icon {
+        display: block; /* Show hamburger menu */
+    }
+}
+
+
+/* Register Page */
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
+    height: 80vh;
+    width: 100%;
 }
 
-.container {
-    background: #ffffff;
+.register-box {
+    background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 90%;
     max-width: 400px;
-}
-
-h1, h2 {
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-button, .btn {
-    background: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-    display: block;
     width: 100%;
-    text-align: center;
-    text-decoration: none;
 }
 
-button:hover, .btn:hover {
-    background: #0056b3;
+.register-box h1 {
+    color: #800020;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-input, select {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.register-box p {
+    color: #555;
     font-size: 14px;
 }
 
-nav {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    text-align: center;
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
-nav a {
-    margin: 0 15px;
-    color: #007bff;
-    text-decoration: none;
+label {
     font-weight: bold;
-    transition: 0.3s;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
-nav a:hover {
-    color: #0056b3;
-}
-
-/* Logout Page */
-.logout-container {
-    text-align: center;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 450px;
-}
-
-.logout-container h1 {
-    font-size: 28px;
-    color: #2c3e50;
-}
-
-.logout-container p {
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
 }
 
-.logout-container .btn {
-    margin: 5px 0;
-    width: 100%;
+button.btn-register {
+    background: #800020;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button.btn-register:hover {
+    background: #b22234; /* Lighter red */
+}
+
+.error {
+    color: red;
+    font-weight: bold;
 }
 
 
 
+
+/* Style for Get Started Button */
+.get-started-btn {
+    display: inline-block;
+    background-color: #800020; /* Burgundy */
+    color: white;
+    padding: 15px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.get-started-btn:hover {
+    background-color: #b22234; /* Lighter red */
+    transform: scale(1.05);
+}
+
+
+/* for the main image */
+.full-width-image {
+    width: 100vw; /* Full viewport width */
+    height: 80vh; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image covers the container */
+    display: block; /* Removes any inline spacing */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+@media (max-width: 768px) {
+    .full-width-image {
+        height: 30vh; /* Adjust for smaller screens */
+    }
+}
