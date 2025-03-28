@@ -30,6 +30,7 @@ $medicines = $query->fetchAll(PDO::FETCH_ASSOC);
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="login.php">Login</a></li>
+                <li><a href="user_profile.php">My Profile</a></li>
             </ul>
 
             <!-- Mobile Menu Toggle (Hamburger Icon) -->
@@ -43,6 +44,7 @@ $medicines = $query->fetchAll(PDO::FETCH_ASSOC);
             <a href="faq.php">FAQ</a>
             <a href="register.php">Register</a>
             <a href="login.php">Login</a>
+            <a href="user_profile.php">Login</a>
         </div>
     </nav>
 

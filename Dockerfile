@@ -12,3 +12,4 @@ EXPOSE 8080
 
 # Run PHP's built-in server
 CMD ["php", "-S", "0.0.0.0:8080"]
+rm database.sqlite  #
