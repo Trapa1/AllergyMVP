@@ -1,0 +1,6 @@
+{
+    "requested_url": "https:\/\/api.barcodelookup.com\/v3\/products?barcode=3282779003124&formatted=y&key=3ktsbqxub0fhbceypdgr5s0vat209t",
+    "http_code": 429,
+    "raw_response": "",
+    "decoded_data": null
+}

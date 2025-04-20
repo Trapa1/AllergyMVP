@@ -1,0 +1,122 @@
+<?php
+return [
+    // General
+    "home" => "Startseite",
+    "scan" => "Medikament scannen",
+    "logout" => "Abmelden",
+    "profile" => "Benutzerprofil",
+    "update_profile" => "Profil aktualisieren",
+    "profile_updated" => "Profil erfolgreich aktualisiert!",
+    "name" => "Name",
+    "age" => "Alter",
+    "gender" => "Geschlecht",
+    "male" => "Männlich",
+    "female" => "Weiblich",
+    "other" => "Andere",
+    "allergies" => "Allergien (durch Komma getrennt)",
+    "save" => "💾 Profil speichern",
+
+    // Scanner
+    'waiting' => 'Warten auf Scan...',
+    'checking' => 'Produktinformationen werden überprüft...',
+    'product' => 'Produkt',
+    'ingredients' => 'Inhaltsstoffe',
+    'no_ingredients' => 'Keine Inhaltsstoffe aufgeführt',
+    'alert' => '⚠ Allergie-Warnung! Möglicherweise allergisch gegen:',
+    'safe' => '✅ Keine passenden Allergene gefunden.',
+    'not_found' => '❌ Produkt nicht in der Datenbank gefunden.',
+    'error' => '❌ Fehler beim Abrufen der Produktinformationen.',
+    'back' => 'Zurück zum Profil',
+
+    // History
+    'history' => 'Scanverlauf',
+    'barcode' => 'Strichcode',
+    'scanned_on' => 'Gescannt am',
+    'none' => 'Keine',
+    'no_scans' => "Du hast noch keine Produkte gescannt.",
+    'back_to_scanner' => 'Zurück zum Scanner',
+
+    // Index Page
+    'app_name' => 'Allergie-Alarm',
+    'scanner' => 'Scanner',
+    'faq' => 'FAQ',
+    'register' => 'Registrieren',
+    'login' => 'Anmelden',
+    'scan_history' => 'Mein Scanverlauf',
+    'get_started' => 'Jetzt starten',
+    'what_is' => 'Was ist eine Arzneimittelallergie?',
+    'what_is_text1' => 'Eine Arzneimittelallergie ist eine Reaktion des Immunsystems...',
+    'what_is_text2' => 'Häufige Symptome sind Hautausschläge, Übelkeit, Schwindel...',
+    'read_more' => 'Mehr erfahren',
+    'research_title' => 'Forschung zu Arzneimittelallergien',
+    'research_intro' => 'Arzneimittelallergien sind ein großes Thema im Gesundheitswesen...',
+    'mechanism' => 'Das Wirkprinzip verstehen',
+    'mechanism_text' => 'Wenn das Immunsystem ein Medikament als gefährlich einstuft...',
+    'statistics' => 'Statistiken zu Arzneimittelallergien',
+    'statistics_text' => 'Studien zeigen, dass bis zu 10 % der Menschen...',
+    'diagnostic' => 'Diagnosemethoden',
+    'skin_testing' => 'Hauttests – für Penicillin und Antibiotika.',
+    'blood_tests' => 'Bluttests – messen die Immunantwort.',
+    'challenge_tests' => 'Provokationstests – unter medizinischer Aufsicht.',
+    'future' => 'Zukunft der Behandlung von Allergien',
+    'future_text' => 'Neue Ansätze wie Desensibilisierung werden erforscht...',
+    'read_study' => 'Die vollständige Forschung lesen',
+    'full_research' => 'Vollständige Studie',
+
+    // Spring Allergies Section
+    'spring_allergies_title' => 'Frühjahrsallergien: Ursachen, Symptome und Vorbeugung',
+    'spring_intro' => 'Der Frühling bringt Wärme, aber auch Pollen...',
+    'causes' => 'Was verursacht Frühjahrsallergien?',
+    'causes_text' => 'Hauptauslöser sind Pollen von Bäumen, Gräsern und Unkraut.',
+    'symptoms' => 'Häufige Symptome',
+    'sneeze' => 'Niesen & laufende Nase',
+    'itchy' => 'Juckende, tränende Augen',
+    'fatigue' => 'Müdigkeit',
+    'wheezing' => 'Keuchen (bei Asthmapatienten)',
+    'prevention' => 'Vorbeugungstipps',
+    'purifier' => 'Luftreiniger im Haus verwenden',
+    'glasses' => 'Sonnenbrille tragen, um Pollen fernzuhalten',
+    'antihistamine' => 'Antihistaminika vor der Saison einnehmen',
+    'windows' => 'Fenster an pollenreichen Tagen geschlossen halten',
+    'read_spring' => 'Mehr über Frühjahrsallergien erfahren',
+
+    // Testing
+    'testing' => 'Die Bedeutung von Allergietests',
+    'testing_intro' => 'Allergietests sind wichtig, um relevante Allergene zu erkennen...',
+    'types_of_tests' => 'Arten von Allergietests',
+    'skin_prick' => 'Pricktest – Kleine Menge Allergen auf der Haut.',
+    'blood_test' => 'Bluttest – Misst spezifische Antikörper.',
+    'why_get_tested' => 'Warum testen lassen?',
+    'prevent_reactions' => 'Schwere allergische Reaktionen vermeiden',
+    'get_treatment' => 'Die richtige Behandlung erhalten',
+    'avoid_restrictions' => 'Unnötige Einschränkungen vermeiden',
+    'read_testing' => 'Mehr über Allergietests erfahren',
+    'footer' => 'Ihre Gesundheit, Ihre Sicherheit',
+
+    // Registration Page
+    'register_title' => 'Registrieren',
+    'create_account' => 'Konto erstellen',
+    'join_allergy_alert' => 'Melde dich bei Allergie-Alarm an, um deine Arzneimittelallergien zu verwalten.',
+    'email_exists' => '❌ Diese E-Mail ist bereits registriert. Bitte anmelden oder eine andere verwenden.',
+    'language' => 'Sprache',
+    'full_name' => 'Vollständiger Name',
+    'already_account' => 'Bereits ein Konto?',
+    'login_here' => 'Hier anmelden',
+    'email' => 'E-Mail-Adresse',
+    'password' => 'Passwort',
+
+    // Login
+    'login_title' => 'Anmelden',
+    'login_intro' => 'Willkommen zurück! Bitte melde dich an.',
+    'login_invalid' => '❌ Ungültige E-Mail oder Passwort.',
+    'no_account' => 'Noch kein Konto?',
+
+    // Logout
+    'logged_out_title' => 'Abgemeldet',
+    'logged_out_message' => 'Du wurdest erfolgreich abgemeldet!',
+    'thank_you' => 'Danke für die Nutzung von',
+
+    //suggestion
+    'alternatives' => 'Suggested alternatives',
+
+];

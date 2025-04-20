@@ -1,36 +1,32 @@
 <?php
-session_start();
 header('Content-Type: application/json');
-$db = new PDO('sqlite:database.sqlite');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+session_start();
 
-if (!isset($_SESSION['user_id']) || !isset($_GET['barcode'])) {
-    echo json_encode(["error" => "Unauthorized"]);
+// Step 1: Get the barcode from the URL
+$barcode = $_GET['barcode'] ?? '';
+
+if (!$barcode) {
+    echo json_encode(["error" => "Barcode is missing"]);
     exit;
 }
 
-$user_id = $_SESSION['user_id'];
-$barcode = $_GET['barcode'];
 
-// Get user's allergies
-$stmt = $db->prepare("SELECT allergies FROM users WHERE id = ?");
-$stmt->execute([$user_id]);
-$user = $stmt->fetch(PDO::FETCH_ASSOC);
-$user_allergies = explode(", ", strtolower($user['allergies']));
-
-// Find the ingredient from barcode
-$stmt = $db->prepare("SELECT name FROM ingredients WHERE barcode = ?");
-$stmt->execute([$barcode]);
-$ingredient = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if ($ingredient) {
-    $ingredient_name = strtolower($ingredient['name']);
-
-    if (in_array($ingredient_name, $user_allergies)) {
-        echo json_encode(["allergic" => true, "ingredient" => $ingredient_name]);
-    } else {
-        echo json_encode(["allergic" => false]);
-    }
-} else {
-    echo json_encode(["error" => "Barcode not found in database"]);
+// Step 4: Check if the product was found
+if (!isset($data['product']['product_name'])) {
+    echo json_encode(["found" => false, "message" => "Product not found"]);
+    exit;
 }
+
+// Step 5: Extract info
+$medicineName = strtolower(trim($data['product']['product_name']));
+$ingredients = isset($data['product']['ingredients_text']) ? strtolower($data['product']['ingredients_text']) : '';
+
+// Step 6: Return info in JSON
+echo json_encode([
+    "found" => true,
+    "medicine" => $medicineName,
+    "ingredients" => $ingredients
+]);
 ?>
