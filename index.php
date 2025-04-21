@@ -7,7 +7,7 @@ $langFile = __DIR__ . "/language/$language.php";
 $lang = file_exists($langFile) ? require $langFile : require __DIR__ . "/language/en.php";
 
 // Connect to SQLite
-$db = new PDO('sqlite:/var/www/html/database.sqlite');
+$db = new PDO('sqlite:database.sqlite');
 $query = $db->query("SELECT * FROM medicines");
 $medicines = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
