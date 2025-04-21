@@ -1,17 +1,15 @@
-# Use the official PHP 8.2 image
+# Use PHP base image
 FROM php:8.2-cli
 
-# Set the working directory in the container
+# Set working directory
 WORKDIR /var/www/html
 
-# Copy all files to the working directory
+# Copy all files including the database
 COPY . .
 
-# Remove the database if it exists (optional)
-RUN rm -f database.sqlite
-
-# Expose port 8080 for the application
+# Expose port 8080
 EXPOSE 8080
 
-# Run PHP's built-in server
+# Start PHP built-in server
 CMD ["php", "-S", "0.0.0.0:8080"]
+
