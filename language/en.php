@@ -104,6 +104,8 @@ return [
     'login_here' => 'Login here',
     'email' => 'Email Address',
     'password' => 'Password',
+    'register_here' => "Register here",
+
 
     // Login
     'login_title' => 'Log In',
