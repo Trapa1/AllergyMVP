@@ -172,8 +172,8 @@ return [
      //about page 
      // About Page
 'about_title' => 'About Allergy Alert',
-'about_paragraph1' => "Hi, I'm Tabita — the creator of this platform. Allergy Alert was born out of a very personal and frightening experience. After being prescribed an antibiotic at a hospital, I suffered an anaphylactic shock — a life-threatening allergic reaction that came without warning.",
-'about_paragraph2' => "That moment changed everything. I realized how fragile our health can be when important medical information is missing or overlooked. It was then I made a big decision: I wanted to create something that could help others avoid what I went through.",
+'about_paragraph1' => "Hi, I'm Tabita — the creator of this platform. Allergy Alert was born out of a very personal and frightening experience. After being prescribed an antibiotic at a hospital, I suffered an anaphylactic shock, a life-threatening allergic reaction that came without warning.",
+'about_paragraph2' => "That moment changed everything. I realised how fragile our health can be when important medical information is missing. It was then I made a big decision: I wanted to create something that could help others avoid what I went through.",
 'about_paragraph3' => "Allergy Alert is the result of that decision — a platform that empowers users to:",
 'about_bullet1' => ' Scan medication barcodes',
 'about_bullet2' => ' Instantly identify risky ingredients',
@@ -181,9 +181,9 @@ return [
 'about_bullet4' => ' Make medication safety more accessible',
 'about_paragraph4' => "Whether you're managing allergies yourself or helping care for someone else — this app was made with you in mind.",
 'about_mission_heading' => ' Our Mission',
-'about_mission_text' => 'To prevent allergic emergencies by making medication information clear, accessible, and personalized.',
+'about_mission_text' => 'To prevent allergic emergencies by making medication information clear, accessible, and personalised.',
 'about_contact_heading' => ' Want to reach out?',
-'about_contact_text' => "If you'd like to share your feedback or have ideas to improve Allergy Alert, I'd love to hear from you! (You can add a contact form or email here later.)",
+'about_contact_text' => "If you'd like to share your feedback or have ideas to improve Allergy Alert, I'd love to hear from you! On Contact us section",
 
 
 // Goodbye Page
