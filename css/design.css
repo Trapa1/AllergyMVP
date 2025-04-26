@@ -133,49 +133,53 @@
   
 
   /* Navbar Mobile */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .main-navbar {
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 10px;
+      align-items: flex-start;
+      padding: 20px;
     }
   
     .nav-logo {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
   
     .nav-center,
     .nav-right,
     .auth-links {
-      display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       width: 100%;
-      gap: 8px;
-      margin: 0;
-      padding: 0;
+      gap: 10px;
     }
   
     .nav-center a,
     .auth-links a,
     .dropdown .dropbtn {
+      display: block;
       width: 100%;
-      padding: 6px 0;
+      text-align: left;
       font-size: 16px;
+      padding: 10px 0;
       border: none;
     }
   
     .search-bar {
-      margin: 10px auto;
-      max-width: 80%;
+      width: 100%;
+      justify-content: flex-start;
+      margin: 10px 0;
+    }
+  
+    .search-bar input[type="text"] {
+      width: 100%;
     }
   
     .dropdown-content {
-      position: static; /* Don't float on mobile */
-      width: 100%;
-      text-align: center;
+      position: static;
       box-shadow: none;
+      width: 100%;
+      border: none;
+      padding: 0;
     }
   
     .dropdown-content a {
@@ -183,6 +187,7 @@
       font-size: 15px;
     }
   }
+  
   
   /* Article cards Mobile */
   @media (max-width: 768px) {
