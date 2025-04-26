@@ -21,7 +21,7 @@ $darkMode = isset($_SESSION['dark_mode']) && $_SESSION['dark_mode'] === true;
 
 
 <!-- ✅ About Section -->
-<section class="info content-wrapper">
+<section class="info content-wrapper" style="padding-left: 30px;">
   <h1><?= $lang['about_title'] ?></h1>
 
   <p><?= $lang['about_paragraph1'] ?></p>
@@ -29,18 +29,18 @@ $darkMode = isset($_SESSION['dark_mode']) && $_SESSION['dark_mode'] === true;
   <p><?= $lang['about_paragraph3'] ?></p>
 
   <ul>
-    <li>📷 <?= $lang['about_bullet1'] ?></li>
-    <li>🔎 <?= $lang['about_bullet2'] ?></li>
-    <li>📄 <?= $lang['about_bullet3'] ?></li>
-    <li>🌍 <?= $lang['about_bullet4'] ?></li>
+    <li><?= $lang['about_bullet1'] ?></li>
+    <li> <?= $lang['about_bullet2'] ?></li>
+    <li> <?= $lang['about_bullet3'] ?></li>
+    <li> <?= $lang['about_bullet4'] ?></li>
   </ul>
 
   <p><?= $lang['about_paragraph4'] ?></p>
 
-  <h3>📌 <?= $lang['about_mission_heading'] ?></h3>
+  <h3> <?= $lang['about_mission_heading'] ?></h3>
   <p><?= $lang['about_mission_text'] ?></p>
 
-  <h3>💬 <?= $lang['about_contact_heading'] ?></h3>
+  <h3> <?= $lang['about_contact_heading'] ?></h3>
   <p><?= $lang['about_contact_text'] ?></p>
 </section>
 
