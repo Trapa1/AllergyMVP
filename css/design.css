@@ -1,130 +1,47 @@
 
-body {
+   body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
-    padding-top: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Navigation Bar */
-nav {
-    width: 100%;
-    background: #800020; /* Burgundy */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; /* Added this to prevent overlapping */
-}
-
-nav .logo {
-    font-size: 22px;
-    font-weight: bold;
+  }
+  
+  body.home {
+    margin-top: 60px; 
+  }
+  
+  body:not(.home) {
+    padding-top: 90px;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  .dark-mode nav,
+  .dark-mode .profile-box,
+  .dark-mode .register-box {
+    background-color: #1e1e1e;
     color: white;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-nav .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-
-.btn-login {
-    background: white;
-    color: #800020;
-    padding: 8px 16px;
-    border-radius: 5px;
-}
-/* Content Wrapper (NEW FIX) */
-.content-wrapper {
-    margin-top: 120px; /* Pushes content down to avoid navbar overlap */
-}
-
-/* Hamburger Menu */
-.menu-icon {
-    display: none; /* Hidden by default on large screens */
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
-.mobile-menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    overflow: hidden;
-    width: 200px;
-    transition: 0.3s ease-in-out;
-}
-.mobile-menu.active {
-    display: block; /* Show menu when active */
-}
-
-.mobile-menu a {
-    display: block;
-    padding: 10px 15px;
-    color: #800020;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.mobile-menu a:hover {
-    background: #f1f1f1;
-}
-
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide links */
-    }
-    .menu-icon {
-        display: block; /* Show hamburger menu */
-    }
-}
-
-
-/* Register Page */
-.register-container {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ================================
+     🧭 NAVIGATION BAR - REFINED LOOK
+     ================================ */
+  
+  /* REGISTER PAGE STYLES */
+  .register-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    width: 100%;
-}
-
-.register-box {
+    min-height: calc(100vh - 80px);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .register-box {
     background: white;
     padding: 30px;
     border-radius: 10px;
@@ -132,65 +49,63 @@ nav .logo {
     text-align: center;
     max-width: 400px;
     width: 100%;
-}
-
-.register-box h1 {
-    color: #800020;
+  }
+  
+  .register-box h1 {
+    color: #edeaeb;
     font-size: 24px;
     margin-bottom: 10px;
-}
-
-.register-box p {
+  }
+  
+  .register-box p {
     color: #555;
     font-size: 14px;
-}
-
-form {
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-}
-
-label {
+  }
+  
+  label {
     font-weight: bold;
     text-align: left;
     margin-bottom: 5px;
-}
-
-input, select {
+  }
+  
+  input,
+  select {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-}
-
-button.btn-register {
-    background: #800020;
-    color: white;
+  }
+  
+  button.btn-register {
+    background: #fdfdfd;
+    color: rgb(0, 0, 0);
     padding: 12px;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-}
-
-button.btn-register:hover {
-    background: #b22234; /* Lighter red */
-}
-
-.error {
+  }
+  
+  button.btn-register:hover {
+    background: #b22234;
+  }
+  
+  .error {
     color: red;
     font-weight: bold;
-}
-
-
-
-
-/* Style for Get Started Button */
-.get-started-btn {
+  }
+  
+  /* GET STARTED BUTTON STYLE */
+  .get-started-btn {
     display: inline-block;
-    background-color: #800020; /* Burgundy */
+    background-color: #800020;
     color: white;
     padding: 15px 28px;
     font-size: 18px;
@@ -199,107 +114,758 @@ button.btn-register:hover {
     border-radius: 8px;
     text-decoration: none;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-    margin-top: 20px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 500;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.get-started-btn:hover {
-    background-color: #b22234; /* Lighter red */
+  }
+  
+  .get-started-btn:hover {
+    background-color: #b22234;
     transform: scale(1.05);
-}
+  }
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
 
-
-/* for the main image */
-.full-width-image {
-    width: 100vw; /* Full viewport width */
-    height: 80vh; /* Adjust height as needed */
-    object-fit: cover; /* Ensures the image covers the container */
-    display: block; /* Removes any inline spacing */
-    margin: 0 auto; /* Centers the image horizontally */
-}
-
+  /* Navbar Mobile */
 @media (max-width: 768px) {
-    .full-width-image {
-        height: 30vh; /* Adjust for smaller screens */
+    .main-navbar {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
+  
+    .nav-center, .nav-right, .auth-links {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .nav-center a, .auth-links a {
+      padding: 10px 0;
+      font-size: 16px;
+    }
+  }
+  
+  /* Article cards Mobile */
+  @media (max-width: 768px) {
+    .article-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px;
+    }
+  
+    .article-card img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .article-card {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  
+  /* FAQ Styling */
+  .faq-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 20px;
+  }
+  .faq-container h1 {
+    text-align: center;
+    color: #800020;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .faq-item {
+    background-color: #f5f5f5;
+    border-left: 5px solid #800020;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .faq-item h3 {
+    margin: 0 0 10px;
+    color: #333;
+  }
+  .faq-item p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* ========================
+   🔻 FOOTER STYLES
+   ======================== */
+  .main-footer {
+    background-color: #800020;
+    color: white;
+    padding: 5px 20px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-links a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+  
+  .profile-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Dropdown Container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 10px;
+    color: #333;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    color: #800020;
+  }
+  
+  /* 🌐 GENERAL NAVBAR STYLE */
+  .main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+  }
+  
+  .nav-logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #800020;
+    text-decoration: none;
+  }
+  
+  .nav-center {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .nav-link:hover {
+    color: #800020;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  .search-bar button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .auth-links {
+    display: flex;
+    gap: 15px;
+    padding-right: 30px;
+  }
+  
+  .btn-auth {
+    text-decoration: none;
+    font-weight: bold;
+    color: #800020;
+    padding: 6px 10px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .btn-auth:hover {
+    color: #000;
+  }
+  
+  .minimal-nav {
+    background: #800020;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .minimal-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .minimal-container a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .minimal-container a:hover {
+    color: #ffd700;
+  }
+  
+
+  .scanner-button {
+    background-color: #ffd700;
+    color: #800020;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .scanner-button:hover {
+    background-color: #ffcc00;
+  }
+  
+  /* settings */
+
+  .settings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    box-sizing: border-box;
+  }
+  
+  .settings-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .setting-item {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .setting-item label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .setting-item select,
+  .setting-item button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .dark-mode .settings-box {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  .dark-mode .setting-item select,
+  .dark-mode .setting-item button {
+    background-color: #2e2e2e;
+    color: #fff;
+    border-color: #444;
+  }
+  .info-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+
+/* for the image sections */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  .article-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  .article-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .article-card h3 {
+    font-size: 20px;
+    margin: 15px;
+    color: #800020;
+  }
+  
+  .article-card p {
+    padding: 0 15px 10px;
+    color: #333;
+  }
+  
+  .article-card a {
+    display: block;
+    text-align: right;
+    padding: 10px 15px 15px;
+    font-weight: bold;
+    color: #800020;
+    text-decoration: none;
+  }
+  
+  .article-card a:hover {
+    color: #b22234;
+  }
+  
+  .date-badge {
+    background-color: #b22234;
+    color: white;
+    padding: 10px 14px;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 4px;
+    z-index: 5;
+    line-height: 1.4;
+  }
+  
+  .date-badge span {
+    display: block;
+    font-weight: normal;
+    font-size: 13px;
+  }
+  
+  .article-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .article-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-top: 40px; /* space for the badge */
+  }
+  
+  .article-content {
+    padding: 15px 20px;
+  }
+  
+  .article-content h3 {
+    font-size: 20px;
+    color: #800020;
+    margin-bottom: 8px;
+  }
+  
+  .article-content p {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .article-content a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #800020;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .article-content a:hover {
+    color: #b22234;
+  }
+  
+  /* for the firts images  */
+
+  .full-article {
+    grid-column: 1 / -1;
+  }
+  
+  .full-article img.info-image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+  
+  /* banner image */
+  .canvas-banner {
+    position: relative;
+    width: 100vw; /* full width edge to edge */
+    height: 400px; /* adjust height for narrower look */
+    overflow: hidden;
+    margin-bottom: 40px; /* spacing below image */
+    margin-top: 60px;
+  }
+  
+  .canvas-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+
+  .canvas-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    max-width: 900px;
+  }
+  
+  .canvas-overlay h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .canvas-overlay p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* 🚀 Button repositioned to bottom-right and styled dark grey */
+  .canvas-button {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+  }
+  
+  
+  .canvas-button:hover {
+    background-color: #555;
+  }
+
+  /* for the back to scaner button */
+
+  .btn-auth {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #800020;
+    border: 2px solid #800020;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    margin-top: 20px;
 }
-/* ===============================================
-   🌐 RESPONSIVE ENHANCEMENTS FOR SMALL SCREENS
-   Applied only when width ≤ 600px
-   =============================================== */
-   @media (max-width: 600px) {
 
-    /* 📦 General Layout */
-    body {
-        padding-top: 90px;
-        font-size: 16px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    /* 🧭 Navbar */
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
-    }
-
-    .nav-links {
-        display: none; /* Already hidden in your media query */
-    }
-
-    .menu-icon {
-        align-self: flex-end;
-    }
-
-    /* 🍱 Register Form */
-    .register-container {
-        padding: 10px;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .register-box {
-        padding: 20px;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    input,
-    select,
-    button.btn-register {
-        font-size: 16px;
-        padding: 12px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* 🎯 Get Started Button */
-    .get-started-btn {
-        width: 100%;
-        font-size: 16px;
-        padding: 14px;
-        box-sizing: border-box;
-    }
-
-    /* 🖼️ Main Image */
-    .full-width-image {
-        height: 25vh;
-    }
-
-    /* 🧾 Form styling shared */
-    form {
-        padding: 0;
-        width: 100%;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    /* ✅ Misc */
-    .content-wrapper {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+.btn-auth:hover {
+    background-color: #800020;
+    color: #ffffff;
 }
+
+
+/* Search Bar Container */
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    max-width: 180px;
+    margin-left: 180px; /* ✅ pushes it to the right */
+    
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 4px 10px;
+    font-size: 13px;
+    height: 28px; /* smaller height */
+    width: 120px; /* smaller width */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar input[type="text"]:focus {
+    border-color: #800020;
+  }
+  
+  .search-bar button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #800020;
+    height: 28px; /* match input height */
+    line-height: 28px;
+  }
+  /* search auto-recommendation */
+
+  .suggestions-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  
+  .suggestions-box div {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .suggestions-box div:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Existing class reused */
+.full-width-image {
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Hero Banner Container */
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Burgundy Text Box */
+  .hero-text-box {
+    position: absolute !important;
+    top: 270px !important;            /* ⬅️ Increased from 200px */
+    left: 5% !important;
+    background-color: #800020 !important;
+    color: white !important;
+    padding: 12px 25px !important;
+    width: 450px !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    z-index: 2 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  
+  .hero-text-box h1 {
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .hero-text-box p {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+  
+  
+  
+  
+  .hero-text-box {
+    position: absolute;
+    top: 150px; /* 👈 Try 150-180px for more space */
+    left: 5%;
+    background-color: #800020;
+    color: white;
+    padding: 15px 20px;
+    max-width: 280px;
+    border-radius: 8px;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  .hero-text-box h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text-box p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive only tweaks smaller screens */
+  @media (max-width: 768px) {
+    .full-width-image {
+      height: 30vh;
+    }
+  
+    .hero-text-box {
+      top: 100px; /* you can keep this for smaller screens */
+      max-width: 90%;
+      padding: 12px 16px;
+    }
+  
+    .hero-text-box h1 {
+      font-size: 20px;
+    }
+  
+    .hero-text-box p {
+      font-size: 14px;
+    }
+  }
+  
+  

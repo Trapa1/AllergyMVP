@@ -4,6 +4,9 @@ $language = $_SESSION['language'] ?? 'en';
 $langFile = __DIR__ . "/language/$language.php";
 $lang = file_exists($langFile) ? require $langFile : require __DIR__ . "/language/en.php";
 
+// 🌑 Dark mode session check
+$darkMode = isset($_SESSION['dark_mode']) && $_SESSION['dark_mode'] === true;
+
 $db = new PDO('sqlite:database.sqlite');
 
 $error = '';
@@ -37,20 +40,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <title><?= $lang['login_title'] ?> | Allergy Alert</title>
   <link rel="stylesheet" href="css/design.css">
 </head>
-<body>
-
-<nav>
-  <a href="index.php" class="logo"><?= $lang['app_name'] ?></a>
-  <div class="nav-links">
-    <a href="index.php"><?= $lang['home'] ?></a>
-    <a href="register.php" class="btn-login"><?= $lang['register'] ?></a>
-  </div>
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.php"><?= $lang['home'] ?></a>
-    <a href="register.php"><?= $lang['register'] ?></a>
-  </div>
-</nav>
+<body class="<?= $darkMode ? 'dark-mode home' : 'home' ?>">
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+if ($currentPage !== 'index.php'): ?>
+  <nav class="minimal-nav">
+    <div class="minimal-container">
+      <a href="index.php">← Home</a>
+    </div>
+  </nav>
+<?php endif; ?>
 
 <section class="register-container">
   <div class="register-box">
@@ -83,4 +82,13 @@ function toggleMenu() {
 </script>
 
 </body>
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+if ($currentPage !== 'index.php'): ?>
+  <nav class="minimal-nav">
+    <div class="minimal-container">
+      <a href="index.php">← Home</a>
+    </div>
+  </nav>
+<?php endif; ?>
 </html>

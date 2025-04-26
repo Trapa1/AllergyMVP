@@ -1,6 +1,23 @@
 <?php
 session_start();
+
+
+// Load language file
+$language = $_SESSION['language'] ?? 'en';
+$langFile = __DIR__ . "/language/$language.php";
+
+// 🌑 Dark mode session check
+$darkMode = isset($_SESSION['dark_mode']) && $_SESSION['dark_mode'] === true;
+
+
+if (file_exists($langFile)) {
+    $lang = require $langFile;
+} else {
+    $lang = require __DIR__ . "/language/en.php";
+}
+
 require 'vendor/autoload.php';
+
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -17,11 +34,12 @@ $stmt->execute([$user_id]);
 $scans = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $language ?>">
 <head>
     <meta charset="UTF-8">
-    <title>📜 Scan History</title>
+    <title>📜 <?= $lang['history'] ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/design.css"> 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,30 +98,42 @@ $scans = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 font-weight: bold;
                 white-space: nowrap;
             }
-            td:nth-of-type(1)::before { content: "Product"; }
-            td:nth-of-type(2)::before { content: "Barcode"; }
-            td:nth-of-type(3)::before { content: "Ingredients"; }
-            td:nth-of-type(4)::before { content: "Allergy Match"; }
-            td:nth-of-type(5)::before { content: "Scanned On"; }
+            td:nth-of-type(1)::before { content: "<?= $lang['product'] ?>"; }
+            td:nth-of-type(2)::before { content: "<?= $lang['barcode'] ?>"; }
+            td:nth-of-type(3)::before { content: "<?= $lang['ingredients'] ?>"; }
+            td:nth-of-type(4)::before { content: "<?= $lang['allergies'] ?>"; }
+            td:nth-of-type(5)::before { content: "<?= $lang['scanned_on'] ?>"; }
         }
     </style>
 </head>
-<body>
+<body class="<?= $darkMode ? 'dark-mode' : '' ?>">
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+if ($currentPage !== 'index.php'): ?>
+  <nav class="minimal-nav">
+    <div class="minimal-container">
+      <a href="index.php">← Home</a>
+    </div>
+  </nav>
+<?php endif; ?>
 
-<h1>📜 Scan History</h1>
-<p><a href="barcode_scanner.php">← Back to Scanner</a></p>
+<h1>📜 <?= $lang['history'] ?></h1>
+<p>
+  <a href="barcode_scanner.php" class="btn-auth">← <?= $lang['back_to_scanner'] ?></a>
+</p>
+
 
 <?php if (count($scans) === 0): ?>
-    <p class="gray">You haven't scanned any products yet.</p>
+    <p class="gray"><?= $lang['no_scans'] ?></p>
 <?php else: ?>
     <table>
         <thead>
             <tr>
-                <th>📦 Product</th>
-                <th>🔢 Barcode</th>
-                <th>🧪 Ingredients</th>
-                <th>⚠ Allergies</th>
-                <th>⏰ Date</th>
+                <th>📦 <?= $lang['product'] ?></th>
+                <th>🔢 <?= $lang['barcode'] ?></th>
+                <th>🧪 <?= $lang['ingredients'] ?></th>
+                <th>⚠ <?= $lang['allergies'] ?></th>
+                <th>⏰ <?= $lang['scanned_on'] ?></th>
             </tr>
         </thead>
         <tbody>
@@ -120,7 +150,7 @@ $scans = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <?php if (trim($scan['allergy_matches'])): ?>
                         <span class="warning"><?= htmlspecialchars($scan['allergy_matches']) ?></span>
                     <?php else: ?>
-                        <span class="safe">None</span>
+                        <span class="safe"><?= $lang['none'] ?></span>
                     <?php endif; ?>
                 </td>
                 <td><?= date("Y-m-d H:i", strtotime($scan['timestamp'])) ?></td>
@@ -132,3 +162,4 @@ $scans = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </body>
 </html>
+

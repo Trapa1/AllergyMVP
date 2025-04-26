@@ -16,6 +16,29 @@ return [
     "allergies" => "Allergie (separate da virgole)",
     "save" => "💾 Salva profilo",
 
+    // Navbar
+'home' => 'Home',
+'scanner' => 'Scanner',
+'tools' => 'Strumenti',
+'learn' => 'Impara',
+'my_profile' => 'Il mio profilo',
+'my_history' => 'La mia cronologia',
+'settings' => 'Impostazioni',
+'about_us' => 'Chi siamo',
+'contact' => 'Contatto',
+'faq' => 'FAQ',
+
+    "Allergies in Children" => "Allergie nei bambini",
+"Children can develop allergic reactions to medicines early. Learn how to spot them and what steps to take." => "I bambini possono sviluppare reazioni allergiche ai farmaci fin da piccoli. Scopri come riconoscerle e intervenire.",
+"Allergy Medications in Pregnancy" => "Farmaci per le allergie in gravidanza",
+"Not all allergy meds are safe during pregnancy. Discover which ones to use and what to avoid." => "Non tutti i farmaci antiallergici sono sicuri in gravidanza. Scopri quali usare e quali evitare.",
+"How to Use an EpiPen" => "Come usare un EpiPen",
+"Learn when and how to properly use an EpiPen — it can be life-saving during severe reactions." => "Scopri quando e come usare correttamente un EpiPen — può salvare la vita in caso di reazioni gravi.",
+"Allergy Relief in Pregnancy" => "Sollievo dalle allergie in gravidanza",
+"Simple lifestyle changes and safe remedies for managing allergies while pregnant." => "Semplici cambiamenti nello stile di vita e rimedi sicuri per gestire le allergie durante la gravidanza.",
+"Read Full Article" => "Leggi l’articolo completo",
+
+
     // Scanner
     'waiting' => 'In attesa della scansione...',
     'checking' => 'Verifica delle informazioni sul prodotto...',
@@ -115,4 +138,113 @@ return [
     'logged_out_title' => 'Disconnesso',
     'logged_out_message' => 'Sei stato disconnesso!',
     'thank_you' => 'Grazie per aver utilizzato',
+
+     //suggestion
+     'alternatives' => 'Suggested alternatives',
+
+     //settings 
+    'settings' => 'Impostazioni',
+    'dark_mode' => 'Modalità scura',
+    'clear_history' => 'Cancella cronologia scansioni',
+    'delete_account' => 'Elimina account',
+    'history_cleared' => 'Cronologia cancellata!',
+    'language' => 'Lingua',
+
+     //about page 
+     // About Page - Italian
+'about_title' => 'Informazioni su Allergy Alert',
+'about_paragraph1' => "Ciao, sono Tabita — la creatrice di questa piattaforma. Allergy Alert è nato da un’esperienza molto personale e spaventosa. Dopo aver ricevuto un antibiotico in ospedale, ho avuto uno shock anafilattico — una reazione allergica potenzialmente letale, senza alcun preavviso.",
+'about_paragraph2' => "Quel momento ha cambiato tutto. Ho capito quanto può essere fragile la nostra salute quando mancano informazioni mediche importanti o vengono trascurate. È allora che ho preso una grande decisione: volevo creare qualcosa che potesse aiutare gli altri a evitare ciò che ho vissuto.",
+'about_paragraph3' => "Allergy Alert è il risultato di quella decisione — una piattaforma che consente agli utenti di:",
+'about_bullet1' => ' Scansionare codici a barre dei medicinali',
+'about_bullet2' => ' Identificare istantaneamente ingredienti a rischio',
+'about_bullet3' => ' Registrare reazioni e monitorare la cronologia',
+'about_bullet4' => ' Rendere la sicurezza dei farmaci più accessibile',
+'about_paragraph4' => "Che tu stia gestendo le tue allergie o ti prenda cura di qualcun altro — questa applicazione è stata pensata per te.",
+'about_mission_heading' => ' La Nostra Missione',
+'about_mission_text' => 'Prevenire emergenze allergiche rendendo le informazioni sui farmaci chiare, accessibili e personalizzate.',
+'about_contact_heading' => ' Vuoi contattarci?',
+
+    
+// Goodbye Page
+'goodbye_title' => 'Arrivederci!',
+'goodbye_message' => 'Grazie per aver utilizzato Allergy Alert!',
+'goodbye_text' => 'Speriamo di rivederti presto. Stai al sicuro!',
+'go_home' => 'Torna alla home',
+
+// FAQ Page
+'faq_title' => 'Domande Frequenti',
+'faq_q1' => 'Come scansiono un medicinale?',
+'faq_a1' => 'Apri la pagina Scanner, consenti l’accesso alla fotocamera e punta il codice a barre. Se ci sono ingredienti pericolosi, riceverai un avviso immediato.',
+
+'faq_q2' => 'Ho dimenticato la password. Cosa devo fare?',
+'faq_a2' => 'Vai alla pagina Contattaci e il nostro team ti aiuterà a reimpostarla.',
+
+'faq_q3' => 'Allergy Alert è gratuito?',
+'faq_a3' => 'Sì! Allergy Alert è completamente gratuito.',
+
+'faq_q4' => 'Posso usare l’app senza creare un account?',
+'faq_a4' => 'Puoi sfogliare contenuti generali, ma per scansioni personalizzate serve un account.',
+
+'faq_q5' => 'Perché lo scanner non ha rilevato nulla?',
+'faq_a5' => 'Alcuni codici a barre potrebbero mancare nel nostro database. Segnalacelo tramite la pagina Contatti.',
+
+'faq_q6' => 'Posso aggiornare la mia lista di allergie successivamente?',
+'faq_a6' => 'Sì! Dopo l’accesso visita il tuo Profilo Utente.',
+
+'faq_q7' => 'Come so se sono allergico a un medicinale?',
+'faq_a7' => 'Sintomi: eruzioni cutanee, gonfiore, difficoltà respiratorie. Scopri di più nella home.',
+
+'faq_q8' => 'Quali medicinali sono sicuri per me?',
+'faq_a8' => 'Usa lo scanner per controlli personalizzati e consulta la sezione ricerca.',
+
+'faq_q9' => 'Come evitare medicinali rischiosi in gravidanza?',
+'faq_a9' => 'Consulta sempre il medico. Abbiamo una sezione apposita sulla homepage.',
+
+'faq_q10' => 'Come faccio a sapere se il mio bambino è allergico?',
+'faq_a10' => 'Controlla reazioni cutanee, vomito, difficoltà respiratorie. Scopri di più sulla homepage.',
+
+'faq_q11' => 'Cos’è un EpiPen e quando si usa?',
+'faq_a11' => 'Si usa in caso di reazioni allergiche gravi (anafilassi). Ulteriori info nella homepage.',
+
+'faq_q12' => 'Come conoscete gli ingredienti dei farmaci?',
+'faq_a12' => 'Il nostro scanner abbina il codice a barre alla nostra banca dati in crescita. Aiutaci a migliorare segnalando errori.',
+
+// Contact Page
+'contact_us' => 'Contattaci',
+'your_name' => 'Il tuo nome',
+'your_email' => 'La tua email',
+'your_message' => 'Messaggio',
+'send' => 'Invia',
+'success_message' => 'Messaggio inviato con successo!',
+'error_message' => 'Qualcosa è andato storto, riprova.',
+'fill_all_fields' => 'Per favore compila tutti i campi correttamente.',
+'new_message_subject' => 'Nuovo messaggio di contatto da',
+'name_label' => 'Nome',
+'email_label' => 'Email',
+'message_label' => 'Messaggio',
+
+//searchable things
+
+'home' => 'Home',
+'scanner' => 'Scanner',
+'tools' => 'Strumenti',
+'learn' => 'Impara',
+'my_profile' => 'Il Mio Profilo',
+'my_history' => 'La Mia Cronologia',
+'settings' => 'Impostazioni',
+'about_us' => 'Chi Siamo',
+'contact' => 'Contatto',
+'faq' => 'FAQ',
+'register' => 'Registrati',
+'login' => 'Accedi',
+'logout' => 'Disconnettersi',
+'search_placeholder' => 'Cerca...',
+'allergy_research' => 'Ricerca sulle Allergie',
+'spring_allergies_title' => 'Allergie Primaverili',
+'Allergies in Children' => 'Allergie nei Bambini',
+'How to Use an EpiPen' => 'Come Usare un EpiPen',
+'safe_medications' => 'Farmaci Sicuri',
+
+
 ];

@@ -2,6 +2,9 @@
 header('Content-Type: application/json');
 session_start();
 
+// 🌑 Dark mode session check
+$darkMode = isset($_SESSION['dark_mode']) && $_SESSION['dark_mode'] === true;
+
 function normalizeGTIN($code) {
     return ltrim($code, '0');
 }

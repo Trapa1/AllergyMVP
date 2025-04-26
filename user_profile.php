@@ -4,6 +4,9 @@ $language = $_SESSION['language'] ?? 'en';
 $langFile = __DIR__ . "/language/$language.php";
 $lang = file_exists($langFile) ? require $langFile : require __DIR__ . "/language/en.php";
 
+// 🌑 Dark mode session check
+$darkMode = isset($_SESSION['dark_mode']) && $_SESSION['dark_mode'] === true;
+
 require 'vendor/autoload.php';
 
 try {
@@ -109,47 +112,55 @@ if (file_exists($ingredientFile)) {
         });
     </script>
 </head>
-<body>
-    <nav>
-        <a href="index.php">🏠 <?= $lang['home'] ?></a>
-        <a href="barcode_scanner.php">📷 <?= $lang['scan'] ?></a>
-        <a href="logout.php">🚪 <?= $lang['logout'] ?></a>
-    </nav>
+<body class="<?= $darkMode ? 'dark-mode home' : 'home' ?>">
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+if ($currentPage !== 'index.php'): ?>
+  <nav class="minimal-nav">
+    <div class="minimal-container">
+      <a href="index.php">← Home</a>
+    </div>
+  </nav>
+<?php endif; ?>
 
-    <section class="container">
-        <h1>👤 <?= $lang['update_profile'] ?></h1>
 
-        <?php if (isset($_GET['success'])): ?>
-            <p class="success">✅ <?= $lang['profile_updated'] ?></p>
-        <?php endif; ?>
+<section class="profile-container">
+  <div class="profile-box">
+    <h1>👤 <?= $lang['update_profile'] ?></h1>
 
-        <form method="POST">
-            <label><?= $lang['name'] ?>: <input type="text" name="name" value="<?= htmlspecialchars($name) ?>" required></label>
-            <label><?= $lang['age'] ?>: <input type="number" name="age" value="<?= htmlspecialchars($age) ?>" required></label>
-            <label><?= $lang['gender'] ?>:
-                <select name="gender">
-                    <option value="Male" <?= ($gender == "Male") ? "selected" : "" ?>><?= $lang['male'] ?></option>
-                    <option value="Female" <?= ($gender == "Female") ? "selected" : "" ?>><?= $lang['female'] ?></option>
-                    <option value="Other" <?= ($gender == "Other") ? "selected" : "" ?>><?= $lang['other'] ?></option>
-                </select>
-            </label>
-            <label><?= $lang['allergies'] ?>:
-                <input type="text" id="allergy-input" name="allergies" value="<?= htmlspecialchars($allergies) ?>" required>
-            </label>
-            <label><?= $lang['language'] ?>:
-                <select name="language" required>
-                    <option value="en" <?= $language == 'en' ? 'selected' : '' ?>>🇬🇧 English</option>
-                    <option value="fr" <?= $language == 'fr' ? 'selected' : '' ?>>🇫🇷 Français</option>
-                    <option value="ro" <?= $language == 'ro' ? 'selected' : '' ?>>🇷🇴 Română</option>
-                    <option value="de" <?= $language == 'de' ? 'selected' : '' ?>>🇩🇪 Deutsch</option>
-                    <option value="es" <?= $language == 'es' ? 'selected' : '' ?>>🇪🇸 Español</option>
-                    <option value="it" <?= $language == 'it' ? 'selected' : '' ?>>🇮🇹 Italiano</option>
-                    <option value="pt" <?= $language == 'pt' ? 'selected' : '' ?>>🇵🇹 Português</option>
-                </select>
-            </label>
-            <button type="submit"><?= $lang['save'] ?></button>
-        </form>
-    </section>
+    <?php if (isset($_GET['success'])): ?>
+      <p class="success">✅ <?= $lang['profile_updated'] ?></p>
+    <?php endif; ?>
+
+    <form method="POST">
+        <label><?= $lang['name'] ?>: <input type="text" name="name" value="<?= htmlspecialchars($name) ?>" required></label>
+        <label><?= $lang['age'] ?>: <input type="number" name="age" value="<?= htmlspecialchars($age) ?>" required></label>
+        <label><?= $lang['gender'] ?>:
+            <select name="gender">
+                <option value="Male" <?= ($gender == "Male") ? "selected" : "" ?>><?= $lang['male'] ?></option>
+                <option value="Female" <?= ($gender == "Female") ? "selected" : "" ?>><?= $lang['female'] ?></option>
+                <option value="Other" <?= ($gender == "Other") ? "selected" : "" ?>><?= $lang['other'] ?></option>
+            </select>
+        </label>
+        <label><?= $lang['allergies'] ?>:
+            <input type="text" id="allergy-input" name="allergies" value="<?= htmlspecialchars($allergies) ?>" required>
+        </label>
+        <label><?= $lang['language'] ?>:
+            <select name="language" required>
+                <option value="en" <?= $language == 'en' ? 'selected' : '' ?>>🇬🇧 English</option>
+                <option value="fr" <?= $language == 'fr' ? 'selected' : '' ?>>🇫🇷 Français</option>
+                <option value="ro" <?= $language == 'ro' ? 'selected' : '' ?>>🇷🇴 Română</option>
+                <option value="de" <?= $language == 'de' ? 'selected' : '' ?>>🇩🇪 Deutsch</option>
+                <option value="es" <?= $language == 'es' ? 'selected' : '' ?>>🇪🇸 Español</option>
+                <option value="it" <?= $language == 'it' ? 'selected' : '' ?>>🇮🇹 Italiano</option>
+                <option value="pt" <?= $language == 'pt' ? 'selected' : '' ?>>🇵🇹 Português</option>
+            </select>
+        </label>
+        <button type="submit"><?= $lang['save'] ?></button>
+    </form>
+  </div>
+</section>
+
 </body>
 </html>
 

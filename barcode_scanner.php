@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+// 🌑 Dark mode session check
+$darkMode = isset($_SESSION['dark_mode']) && $_SESSION['dark_mode'] === true;
+
 // Load language file
 $language = $_SESSION['language'] ?? 'en';
 $langFile = __DIR__ . "/language/$language.php";

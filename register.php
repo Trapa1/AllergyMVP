@@ -78,20 +78,17 @@ $allergyList = [
     });
   </script>
 </head>
-<body>
+<body class="<?= $darkMode ? 'dark-mode home' : 'home' ?>">
 
-<nav>
-  <a href="index.php" class="logo"><?= $lang['app_name'] ?></a>
-  <div class="nav-links">
-    <a href="index.php"><?= $lang['home'] ?></a>
-    <a href="login.php" class="btn-login"><?= $lang['login'] ?></a>
-  </div>
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.php"><?= $lang['home'] ?></a>
-    <a href="login.php"><?= $lang['login'] ?></a>
-  </div>
-</nav>
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+if ($currentPage !== 'index.php'): ?>
+  <nav class="minimal-nav">
+    <div class="minimal-container">
+      <a href="index.php">← Home</a>
+    </div>
+  </nav>
+<?php endif; ?>
 
 <section class="register-container">
   <div class="register-box">
