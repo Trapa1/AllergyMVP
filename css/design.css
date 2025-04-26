@@ -138,16 +138,49 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      padding: 10px;
     }
   
-    .nav-center, .nav-right, .auth-links {
+    .nav-logo {
+      margin-bottom: 8px;
+    }
+  
+    .nav-center,
+    .nav-right,
+    .auth-links {
+      display: flex;
       flex-direction: column;
-      margin-top: 10px;
+      align-items: center;
+      width: 100%;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
     }
   
-    .nav-center a, .auth-links a {
-      padding: 10px 0;
+    .nav-center a,
+    .auth-links a,
+    .dropdown .dropbtn {
+      width: 100%;
+      padding: 6px 0;
       font-size: 16px;
+      border: none;
+    }
+  
+    .search-bar {
+      margin: 10px auto;
+      max-width: 80%;
+    }
+  
+    .dropdown-content {
+      position: static; /* Don't float on mobile */
+      width: 100%;
+      text-align: center;
+      box-shadow: none;
+    }
+  
+    .dropdown-content a {
+      padding: 8px 0;
+      font-size: 15px;
     }
   }
   
@@ -798,7 +831,7 @@
   /* Burgundy Text Box */
   .hero-text-box {
     position: absolute !important;
-    top: 270px !important;            /* ⬅️ Increased from 200px */
+    top: 270px !important;            
     left: 5% !important;
     background-color: #800020 !important;
     color: white !important;
