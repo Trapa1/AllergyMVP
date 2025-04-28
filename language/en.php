@@ -169,7 +169,6 @@ return [
     'history_cleared' => 'History cleared!',
     'language' => 'Language',
 
-     //about page 
      // About Page
 'about_title' => 'About Allergy Alert',
 'about_paragraph1' => "Hi, I'm Tabita — the creator of this platform. Allergy Alert was born out of a very personal and frightening experience. After being prescribed an antibiotic at a hospital, I suffered an anaphylactic shock, a life-threatening allergic reaction that came without warning.",
@@ -265,6 +264,12 @@ return [
 'How to Use an EpiPen' => 'How to Use an EpiPen',
 'safe_medications' => 'Safe Medications',
 
+
+'how_to_use_title' => 'How to Use AllergyAlert',
+  'how_to_use_step1' => '1. Register, add your allergies',
+  'how_to_use_step2' => '2. Use your device\'s front camera to scan medicine barcodes',
+  'how_to_use_step3' => '3. Instantly check ingredients and allergy warnings',
+  'how_to_use_step4' => '4. Check your scan history',
 
 ];
 

@@ -166,7 +166,7 @@ return [
     'history_cleared' => 'Historique effacé !',
     'language' => 'Langue',
 
-     //about page 
+
      // About Page
 'about_title' => 'À propos de Allergy Alert',
 'about_paragraph1' => "Bonjour, je suis Tabita — la créatrice de cette plateforme. Allergy Alert est née d'une expérience très personnelle et effrayante. Après avoir reçu un antibiotique à l'hôpital, j'ai subi un choc anaphylactique — une réaction allergique mettant ma vie en danger, survenue sans avertissement.",
@@ -260,6 +260,12 @@ return [
 'Allergies in Children' => 'Allergies chez les enfants',
 'How to Use an EpiPen' => 'Comment utiliser un EpiPen',
 'safe_medications' => 'Médicaments sûrs',
+
+'how_to_use_title' => 'Comment utiliser AllergyAlert',
+'how_to_use_step1' => '1. Inscrivez-vous et ajoutez vos allergies',
+'how_to_use_step2' => '2. Utilisez la caméra frontale de votre appareil pour scanner les codes-barres des médicaments',
+'how_to_use_step3' => '3. Vérifiez instantanément les ingrédients et les avertissements d’allergie',
+'how_to_use_step4' => '4. Consultez votre historique de scans',
 
 
 ];

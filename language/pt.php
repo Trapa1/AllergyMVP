@@ -257,6 +257,11 @@ return [
 'How to Use an EpiPen' => 'Como Usar um EpiPen',
 'safe_medications' => 'Medicamentos Seguros',
 
+'how_to_use_title' => 'Como usar o AllergyAlert',
+'how_to_use_step1' => '1. Registe-se e adicione as suas alergias',
+'how_to_use_step2' => '2. Use a câmara frontal do dispositivo para digitalizar os códigos de barras dos medicamentos',
+'how_to_use_step3' => '3. Verifique instantaneamente os ingredientes e os alertas de alergia',
+'how_to_use_step4' => '4. Verifique o seu histórico de digitalizações',
 
 
 ];

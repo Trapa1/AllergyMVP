@@ -78,11 +78,16 @@ $medicines = $query->fetchAll(PDO::FETCH_ASSOC);
 <section class="hero-banner">
 <a href="register.php" class="get-started-btn"><?= $lang['get_started'] ?></a>
   <img src="images/Allergy-Testing.png" alt="Allergy testing image" class="full-width-image" />
+  <img src="images/qr-code.png" alt="QR Code" class="qr-code">
   <div class="hero-text-box">
-    <h1>Welcome</h1>
+  <h1><?= $lang['how_to_use_title'] ?></h1>
     <p>
-      AllergyAlert is a leading platform dedicated to improving medication safety.<br><br>
-      We believe that everyone deserves access to safe medication and reliable allergy information — because your health matters.
+     <?= $lang['how_to_use_step1'] ?><br>
+     <?= $lang['how_to_use_step2'] ?><br>
+     <?= $lang['how_to_use_step3'] ?><br>
+     <?= $lang['how_to_use_step4'] ?><br><br>
+    <?= $lang['how_to_use_ending'] ?>
+      Because your health matters.
     </p>
   </div>
 </section>

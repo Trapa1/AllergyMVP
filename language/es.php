@@ -150,16 +150,16 @@ return [
     'history_cleared' => '¡Historial borrado!',
     'language' => 'Idioma',
 
-     //about page 
+ 
      // About Page
 'about_title' => 'Acerca de Allergy Alert',
 'about_paragraph1' => "Hola, soy Tabita — la creadora de esta plataforma. Allergy Alert nació de una experiencia muy personal y aterradora. Después de que me recetaron un antibiótico en el hospital, sufrí un shock anafiláctico — una reacción alérgica que puso en peligro mi vida y que ocurrió sin previo aviso.",
 'about_paragraph2' => "Ese momento lo cambió todo. Me di cuenta de lo frágil que puede ser nuestra salud cuando faltan o se pasan por alto informaciones médicas importantes. Fue entonces cuando tomé una gran decisión: quería crear algo que pudiera ayudar a otros a evitar lo que yo pasé.",
 'about_paragraph3' => "Allergy Alert es el resultado de esa decisión — una plataforma que permite a los usuarios:",
-'about_bullet1' => '📷 Escanear códigos de barras de medicamentos',
-'about_bullet2' => '🔎 Identificar instantáneamente ingredientes de riesgo',
-'about_bullet3' => '📄 Registrar reacciones y seguir el historial',
-'about_bullet4' => '🌍 Hacer que la seguridad de los medicamentos sea más accesible',
+'about_bullet1' => ' Escanear códigos de barras de medicamentos',
+'about_bullet2' => ' Identificar instantáneamente ingredientes de riesgo',
+'about_bullet3' => ' Registrar reacciones y seguir el historial',
+'about_bullet4' => ' Hacer que la seguridad de los medicamentos sea más accesible',
 'about_paragraph4' => "Ya sea que estés manejando tus propias alergias o ayudando a cuidar a alguien más — esta aplicación fue hecha pensando en ti.",
 'about_mission_heading' => '📌 Nuestra Misión',
 'about_mission_text' => 'Prevenir emergencias alérgicas haciendo que la información sobre medicamentos sea clara, accesible y personalizada.',
@@ -244,6 +244,12 @@ return [
 'Allergies in Children' => 'Alergias en Niños',
 'How to Use an EpiPen' => 'Cómo Usar un EpiPen',
 'safe_medications' => 'Medicamentos Seguros',
+
+'how_to_use_title' => 'Cómo usar AllergyAlert',
+'how_to_use_step1' => '1. Regístrate y agrega tus alergias',
+'how_to_use_step2' => '2. Usa la cámara frontal de tu dispositivo para escanear los códigos de barras de los medicamentos',
+'how_to_use_step3' => '3. Verifica instantáneamente los ingredientes y las advertencias de alergias',
+'how_to_use_step4' => '4. Consulta tu historial de escaneos',
 
 
 ];

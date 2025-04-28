@@ -26,9 +26,7 @@
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   }
   
-  /* ================================
-     🧭 NAVIGATION BAR - REFINED LOOK
-     ================================ */
+ 
   
   /* REGISTER PAGE STYLES */
   .register-container {
@@ -233,9 +231,7 @@
     line-height: 1.6;
   }
   
-  /* ========================
-   🔻 FOOTER STYLES
-   ======================== */
+  /*FOOTER STYLES */
   .main-footer {
     background-color: #800020;
     color: white;
@@ -331,7 +327,7 @@
     color: #800020;
   }
   
-  /* 🌐 GENERAL NAVBAR STYLE */
+  /* NAVBAR STYLE */
   .main-navbar {
     display: flex;
     justify-content: space-between;
@@ -397,7 +393,7 @@
     font-size: 16px;
     cursor: pointer;
   }
-  
+  /* here are the register login logout */
   .auth-links {
     display: flex;
     gap: 15px;
@@ -417,6 +413,7 @@
     color: #000;
   }
   
+  /* this is for the nav bar from pages  */
   .minimal-nav {
     background: #800020;
     padding: 15px 30px;
@@ -526,7 +523,7 @@
   }
   
 
-/* for the image sections */
+/* for the image article cards sections */
 
 .article-grid {
     display: grid;
@@ -661,13 +658,13 @@
     margin: 15px 0;
   }
   
-  /* banner image */
+  /* second image home page */
   .canvas-banner {
     position: relative;
     width: 100vw; /* full width edge to edge */
-    height: 400px; /* adjust height for narrower look */
+    height: 400px; 
     overflow: hidden;
-    margin-bottom: 40px; /* spacing below image */
+    margin-bottom: 40px; /* spacing between images */
     margin-top: 60px;
   }
   
@@ -702,7 +699,7 @@
     margin-bottom: 10px;
   }
   
-  /* 🚀 Button repositioned to bottom-right and styled dark grey */
+  /*  grey button on home page second image */
   .canvas-button {
     position: absolute;
     bottom: 20px;
@@ -781,10 +778,10 @@
     margin-left: 5px;
     cursor: pointer;
     color: #800020;
-    height: 28px; /* match input height */
+    height: 28px; 
     line-height: 28px;
   }
-  /* search auto-recommendation */
+  /* search auto-recommendation home page */
 
   .suggestions-box {
     position: absolute;
@@ -810,7 +807,7 @@
     background-color: #f0f0f0;
   }
   
-  /* Existing class reused */
+  /* Main image */
 .full-width-image {
     width: 100vw;
     height: 80vh;
@@ -906,4 +903,14 @@
     }
   }
   
+/* QR code */
+.qr-code {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 100px; /* small size */
+    height: auto;
+    z-index: 5;
+    opacity: 0.8;
+  }
   
