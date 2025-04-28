@@ -86,7 +86,6 @@ $medicines = $query->fetchAll(PDO::FETCH_ASSOC);
      <?= $lang['how_to_use_step2'] ?><br>
      <?= $lang['how_to_use_step3'] ?><br>
      <?= $lang['how_to_use_step4'] ?><br><br>
-    <?= $lang['how_to_use_ending'] ?>
       Because your health matters.
     </p>
   </div>
